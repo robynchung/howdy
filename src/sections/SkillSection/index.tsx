@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "ui/Layout";
 
-import ListItem from "ui/List/ListItem";
+import { ListItem } from "ui/List/ListItem";
 import { Title1 } from "ui/Title";
 import skills from "contents/skils.json";
 import highlight from "contents/hightlight.json";

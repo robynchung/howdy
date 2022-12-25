@@ -26,7 +26,7 @@ function Layout({ leftComp, rightComp, leftColumns, rightColumns }: Props) {
   return (
     <section>
       <Container container>
-        <Grid item {...leftColumns} style={{ border: "solid 1px " }}>
+        <Grid item {...leftColumns}>
           {leftComp}
         </Grid>
         <Grid item {...rightColumns}>

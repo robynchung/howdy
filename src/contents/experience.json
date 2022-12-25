@@ -1,0 +1,55 @@
+[
+  {
+    "title": "Front-End Engineer",
+    "org": "CleanSlate UV",
+    "range": {
+      "location": "Toronto ON",
+      "time": "Dec 2020 ~ Present"
+    },
+
+    "details": [
+      "Collaborating with IoT engineers to improve hardware and [[React Native mobile app with Swift and Android]] WiFi connectivity and syncing data performance via [[Bluetooth Low Energy (ESP 32)]]",
+      "Implementing [[an enterprise application using React, React Native (iOS and Android), and AWS]] for device management, reporting, and sanitizing device analytic data.",
+      "Developing and implementing [[front-end architecture]] to ensure solutions are maintainable, modular, and work well across browsers and devices.",
+      "Creating [[wireframes, prototypes, and interfaces]] that meet client requirements.",
+      "Creating and designing reusable [[graphic UI components using Material UI]] and building [[navigation components and providing solutions.]]",
+      "Deploying a web app, connecting to [[Cognito for authentication]] for clients to [[various cloud environments]] with the use of modern tools such as [[AWS Amplify]]",
+      "Fetching a large amount of data from the back-end using API gateway Restful service",
+      "Building [[Rest API]] using [[Serverless Framework, AWS API Gateway, Lambda, and DynamoDB]]",
+      "Managing [[TestFlight builds, App Store, and Google Play release.]]"
+    ]
+  },
+
+  {
+    "title": "Full Stack Developer",
+    "org": "Hesper",
+    "range": {
+      "location": "Montréal QC",
+      "time": "Apr 2019 ~ Dec 2020"
+    },
+
+    "details": [
+      "Implemented SaaS Application using [[React, Redux, Contentful, Algolia, AWS,]] and [[MySQL.]]",
+      "Implemented Responsive design and [[Cross-Browser compatibility.]]",
+      "Comminicated with Designer to build pixel perfect [[Wordpress website]] using [[PHP, jQuery, HTML5 and CSS3.]]",
+      "Developed [[OCR API]] using [[Node.js, Regex and Azure Computer vision]]"
+    ]
+  },
+
+  {
+    "title": "Software Engineer Intern",
+    "org": "Nuance Communications",
+    "range": {
+      "location": "Montréal QC",
+      "time": "Jan 2019 ~ Apr 2019"
+    },
+
+    "details": [
+      "Migrated components from [[AngularJS]] to [[React.js.]]",
+      "Shared and version-contralled source code with [[Gitlab.]]",
+      "CreatedReactapplicationusingWebpack.",
+      "Worked independently and collaborated with team members in remote oﬃces.",
+      "Built a [[Electron]] Desktop application with [[React]]."
+    ]
+  }
+]

@@ -19,18 +19,18 @@ const StyledListItem = styled("li")((props: StyledCompProps) => {
     color: colors.text,
     fontFamily: fontFace.text,
     fontSize: "0.8em",
-    fontWeight: highlight ? 800 : 400,
+    fontWeight: highlight ? 800 : 500,
     margin: "4px 0",
     position: "relative",
     zIndex: 1,
 
+    "& ._bold": {
+      fontWeight: 800,
+    },
+
     "&::before": {
       content: '"- "',
       marginRight: 5,
-    },
-
-    "&::after": {
-      content: `""`,
     },
   };
 });
@@ -39,4 +39,13 @@ function ListItem({ row, hightlight }: Props) {
   return <StyledListItem hightlight={hightlight}>{row}</StyledListItem>;
 }
 
-export default ListItem;
+function ListItemExp({ row, hightlight }: Props) {
+  return (
+    <StyledListItem
+      hightlight={hightlight}
+      dangerouslySetInnerHTML={{ __html: row }}
+    />
+  );
+}
+
+export { ListItem, ListItemExp };

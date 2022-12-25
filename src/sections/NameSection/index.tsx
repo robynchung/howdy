@@ -4,12 +4,12 @@ import Layout from "ui/Layout";
 import Name from "ui/Name";
 
 type Props = {
-  ref: {
+  compRef: {
     current: HTMLDivElement | null;
   };
 };
 
-function NameSection({ ref }: Props) {
+function NameSection({ compRef }: Props) {
   const pageStyle = `
       @page { 
         margin: 0;
@@ -37,7 +37,7 @@ function NameSection({ ref }: Props) {
             <ReactToPrint
               pageStyle={pageStyle}
               trigger={() => <button>Print this out!</button>}
-              content={() => ref.current}
+              content={() => compRef.current}
             />
           </>
         }
