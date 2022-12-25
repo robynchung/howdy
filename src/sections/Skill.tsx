@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "ui/Layout";
+import Section from "ui/Layout/Section";
 
 import { ListItem } from "ui/List/ListItem";
 import { Title1 } from "ui/Title";
@@ -15,7 +15,7 @@ function SkillSection() {
 
   return (
     <>
-      <Layout
+      <Section
         leftColumns={{ xs: 2 }}
         rightColumns={{ xs: 10 }}
         leftComp={
@@ -26,7 +26,7 @@ function SkillSection() {
         rightComp={
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             {skills.map((col) => {
-              return <ul>{renderRow(col)}</ul>;
+              return <ul style={{ border: "solid 1px" }}>{renderRow(col)}</ul>;
             })}
           </div>
         }

@@ -2,6 +2,7 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 import { colors, fontFace } from "constants/styles";
+import { Range, Edu } from "./Info";
 
 type TitleProps = {
   title: string;
@@ -14,6 +15,10 @@ type TitleWithOrgProps = {
   range?: {
     location: string;
     time: string;
+  };
+  edu?: {
+    degree: string;
+    gpa: string;
   };
 };
 
@@ -60,13 +65,6 @@ const StyledOrg = styled(Typography)({
   fontSize: "0.9em",
 });
 
-const StyledRange = styled(Typography)({
-  color: colors.range,
-  fontFamily: fontFace.text,
-  fontWeight: 600,
-  fontSize: "0.8em",
-});
-
 function Title1({ title, highlight }: TitleProps) {
   return (
     <StyledTitle1 highlight={highlight} variant="h2">
@@ -75,17 +73,15 @@ function Title1({ title, highlight }: TitleProps) {
   );
 }
 
-function TitleWithOrg({ title, org, range }: TitleWithOrgProps) {
+function TitleWithOrg({ title, org, range, edu }: TitleWithOrgProps) {
   return (
     <div>
       <StyledTitle2 variant="h3">{title}</StyledTitle2>
 
       <StyledOrg>{org}</StyledOrg>
 
-      <div style={{ marginTop: 20 }}>
-        <StyledRange>{range?.location}</StyledRange>
-        <StyledRange>{range?.time}</StyledRange>
-      </div>
+      {range ? <Range location={range?.location} time={range.time} /> : null}
+      {edu ? <Edu degree={edu.degree} gpa={edu.gpa} /> : null}
     </div>
   );
 }

@@ -1,0 +1,20 @@
+[
+  {
+    "major": "Computer Software and Database Development",
+    "school": "Lambton College",
+    "degree": "Post-graduate",
+    "gpa": "3.76/4.0"
+  },
+  {
+    "major": "Multimedia Design",
+    "school": "Open Cyber University",
+    "degree": "Bachelor Degree",
+    "gpa": "3.7/4.5"
+  },
+  {
+    "major": "Visual Design",
+    "school": "Seoul Institute of the Arts",
+    "degree": "Associate Degree",
+    "gpa": "3.7/4.5"
+  }
+]

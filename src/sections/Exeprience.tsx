@@ -1,4 +1,4 @@
-import Layout from "ui/Layout";
+import Section from "ui/Layout/Section";
 
 import { ListItemExp } from "ui/List/ListItem";
 import { TitleWithOrg } from "ui/Title";
@@ -18,7 +18,7 @@ function ExeprienceSection() {
     <>
       {exp.map((experience) => {
         return (
-          <Layout
+          <Section
             leftColumns={{ xs: 2 }}
             rightColumns={{ xs: 10 }}
             leftComp={

@@ -1,9 +1,10 @@
 import React from "react";
 
 // sections
-import NameSection from "sections/NameSection";
-import SkillSection from "sections/SkillSection";
-import ExeprienceSection from "./sections/ExeprienceSection";
+import NameSection from "sections/Name";
+import SkillSection from "sections/Skill";
+import ExeprienceSection from "sections/Exeprience";
+import EducationSection from "sections/Education";
 import { Title1 } from "ui/Title";
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
           </section>
 
           <ExeprienceSection />
+
+          <EducationSection />
         </div>
       </div>
     </>

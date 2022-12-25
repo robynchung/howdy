@@ -1,7 +1,7 @@
 import React from "react";
 import ReactToPrint from "react-to-print";
-import Layout from "ui/Layout";
-import Name from "ui/Name";
+import Section from "ui/Layout/Section";
+import Name from "ui/Title/Name";
 
 type Props = {
   compRef: {
@@ -28,7 +28,7 @@ function NameSection({ compRef }: Props) {
 
   return (
     <>
-      <Layout
+      <Section
         leftColumns={{ md: 7, sm: 4, xs: false }}
         rightColumns={{ md: 5, sm: 8, xs: 12 }}
         leftComp={
