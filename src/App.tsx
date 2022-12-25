@@ -7,7 +7,7 @@ function App() {
 
   const pageStyle = `
     @page { 
-      margin: 0
+      margin: 0;
     }
 
     @media print {
