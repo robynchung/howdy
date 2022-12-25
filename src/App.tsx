@@ -1,9 +1,8 @@
 import React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
-import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 
 import ReactToPrint from "react-to-print";
+import Layout from "ui/Layout";
 
 function App() {
   const componentRef = React.useRef(null);
@@ -11,48 +10,22 @@ function App() {
   return (
     <>
       <div
-        style={{ padding: 10, backgroundColor: `#0852FF` }}
+        style={{
+          backgroundColor: `#0852FF`,
+          border: "solid 10px #0852FF",
+        }}
         ref={componentRef}
       >
-        <Grid
-          container
-          component="main"
-          style={{ backgroundColor: "#fff", padding: 80 }}
-        >
-          <CssBaseline />
-          <Grid
-            item
-            xs={false}
-            sm={4}
-            md={7}
-            sx={{
-              backgroundImage: "url(https://source.unsplash.com/random)",
-              backgroundRepeat: "no-repeat",
-              backgroundColor: (t) =>
-                t.palette.mode === "light"
-                  ? t.palette.grey[50]
-                  : t.palette.grey[900],
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
+        <Layout
+          leftComp={
             <ReactToPrint
               trigger={() => <button>Print this out!</button>}
               content={() => componentRef.current}
             />
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={8}
-            md={5}
-            component={Paper}
-            elevation={6}
-            square
-          >
-            sdfsfsfsf
-          </Grid>
-
+          }
+          rightComp={<div> sdfsfsfsf</div>}
+        />
+        <Grid>
           <Grid>
             Return to classic OneDrive My files backup - React / Redux / Recoil-
             React Native- Javascript / ES6+- Amazon AWS / DynamoDB- Serverless
