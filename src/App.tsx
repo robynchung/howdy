@@ -1,50 +1,17 @@
 import React from "react";
-import ReactToPrint from "react-to-print";
 import Layout from "ui/Layout";
 
+// sections
+import NameSection from "sections/NameSection";
+
 function App() {
-  const componentRef = React.useRef(null);
-
-  const pageStyle = `
-    @page { 
-      margin: 0;
-    }
-
-    @media print {
-      html {
-        border: solid 10pt #0852ff;
-      }
-
-      .container {
-        border: none
-      }
-    }
-  `;
+  const componentRef = React.useRef<HTMLDivElement>(null);
 
   return (
     <>
       <div ref={componentRef}>
         <div className="container">
-          <Layout
-            leftColumns={{ md: 7, sm: 4, xs: false }}
-            rightColumns={{ md: 5, sm: 8, xs: 12 }}
-            leftComp={
-              <>
-                <ReactToPrint
-                  pageStyle={pageStyle}
-                  trigger={() => <button>Print this out!</button>}
-                  content={() => componentRef.current}
-                />
-              </>
-            }
-            rightComp={
-              <ul>
-                <li>Greater Toronto Area 519-466-4673</li>
-                <li>rjungprogrammer@gmail.com</li>
-                <li>https://www.linkedin.com/in/aeri-jung</li>
-              </ul>
-            }
-          />
+          <NameSection ref={componentRef} />
 
           <Layout
             leftColumns={{ xs: 2 }}
