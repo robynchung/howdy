@@ -6,8 +6,6 @@ import { styled } from "@mui/material/styles";
 import Section from "ui/Layout/Section";
 import Name from "ui/Title/Name";
 import Contact from "ui/component/Contact";
-import ResumeContext from "context/ResumeContext";
-import ReactToPrint from "react-to-print";
 
 const NameBox = styled("div")(({ theme }) => {
   return {
@@ -39,21 +37,6 @@ const ContactBox = styled("div")(({ theme }) => {
 });
 
 function NameSection() {
-  const context = React.useContext(ResumeContext.Context);
-
-  const pageStyle = `
-    @page { 
-      margin: 0px;
-    }
-
-    @media print {
-      html {
-        border: solid 5pt #0852ff;
-        padding: 15pt
-      }
-    }
-  `;
-
   return (
     <Section
       leftColumns={{ md: 7, sm: 12 }}
@@ -66,19 +49,9 @@ function NameSection() {
       rightComp={
         <ContactBox>
           <Contact isWeb={true} />
-          <ReactToPrint
-            pageStyle={pageStyle}
-            trigger={() => (
-              <Button
-                variant="outlined"
-                size="small"
-                startIcon={<SaveAltIcon />}
-              >
-                Download Resume
-              </Button>
-            )}
-            content={() => context.current}
-          />
+          <Button variant="outlined" size="small" startIcon={<SaveAltIcon />}>
+            Download Resume
+          </Button>
         </ContactBox>
       }
     />

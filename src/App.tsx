@@ -1,20 +1,11 @@
 import React from "react";
-import Web from "pages/Web";
-import Print from "pages/Print";
-import ResumeContext from "context/ResumeContext";
+import Home from "pages/Home";
 
 // sections
-import Menu from "sections/web/Menu";
+import Menu from "sections/Menu";
 
 function App() {
-  return (
-    <ResumeContext.Provider>
-      <>
-        <Web />
-        <Print />
-      </>
-    </ResumeContext.Provider>
-  );
+  return <Home />;
 }
 
 export default App;

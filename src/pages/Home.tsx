@@ -1,10 +1,7 @@
 import React from "react";
 
-import NameSection from "sections/web/Name";
+import NameSection from "sections/Name";
 import { styled } from "@mui/system";
-
-// sections
-import Menu from "sections/web/Menu";
 
 const Container = styled("div")({
   display: "flex",
@@ -16,7 +13,7 @@ const Container = styled("div")({
   height: "100vh",
 });
 
-function Web() {
+function Home() {
   return (
     <Container>
       {/* <Menu /> */}
@@ -25,4 +22,4 @@ function Web() {
   );
 }
 
-export default Web;
+export default Home;
