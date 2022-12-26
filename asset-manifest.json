@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/howdy/static/css/main.77e4d27a.css",
-    "main.js": "/howdy/static/js/main.dea0b25a.js",
+    "main.js": "/howdy/static/js/main.fdced7c3.js",
     "static/js/787.54c84798.chunk.js": "/howdy/static/js/787.54c84798.chunk.js",
+    "static/media/resume.pdf": "/howdy/static/media/resume.b2134fcbe5767447cb29.pdf",
     "index.html": "/howdy/index.html",
-    "main.77e4d27a.css.map": "/howdy/static/css/main.77e4d27a.css.map",
-    "main.dea0b25a.js.map": "/howdy/static/js/main.dea0b25a.js.map",
+    "main.fdced7c3.js.map": "/howdy/static/js/main.fdced7c3.js.map",
     "787.54c84798.chunk.js.map": "/howdy/static/js/787.54c84798.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.77e4d27a.css",
-    "static/js/main.dea0b25a.js"
+    "static/js/main.fdced7c3.js"
   ]
 }
