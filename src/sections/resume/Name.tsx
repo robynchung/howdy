@@ -2,6 +2,7 @@ import React from "react";
 import ReactToPrint from "react-to-print";
 import Section from "ui/Layout/Section";
 import Name from "ui/Title/Name";
+import Contact from "ui/component/Contact";
 
 type Props = {
   compRef: {
@@ -10,6 +11,7 @@ type Props = {
 };
 
 function NameSection({ compRef }: Props) {
+  console.log({ compRef });
   const pageStyle = `
       @page { 
         margin: 0;
@@ -29,7 +31,7 @@ function NameSection({ compRef }: Props) {
   return (
     <>
       <Section
-        leftColumns={{ md: 7, sm: 4, xs: false }}
+        leftColumns={{ md: 7, sm: 4 }}
         rightColumns={{ md: 5, sm: 8, xs: 12 }}
         leftComp={
           <>
@@ -41,13 +43,7 @@ function NameSection({ compRef }: Props) {
             />
           </>
         }
-        rightComp={
-          <ul>
-            <li>Greater Toronto Area 519-466-4673</li>
-            <li>rjungprogrammer@gmail.com</li>
-            <li>https://www.linkedin.com/in/aeri-jung</li>
-          </ul>
-        }
+        rightComp={<Contact isWeb={false} />}
       />
     </>
   );

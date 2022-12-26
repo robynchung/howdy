@@ -18,7 +18,7 @@ function EducationSection() {
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             {edu.map((education) => {
               return (
-                <ul>
+                <ul key={education.major}>
                   <TitleWithOrg
                     title={education.major}
                     org={education.school}

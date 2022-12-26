@@ -22,18 +22,27 @@ const Container = styled(Grid)(() => {
   };
 });
 
+const Section = styled("section")({
+  width: "100%",
+});
+
+const StyledGrid = styled(Grid)({
+  justifyContent: "center",
+  width: "100%",
+});
+
 function Layout({ leftComp, rightComp, leftColumns, rightColumns }: Props) {
   return (
-    <section>
-      <Container container>
-        <Grid item {...leftColumns}>
+    <Section>
+      <Container container spacing={3}>
+        <StyledGrid item {...leftColumns}>
           {leftComp}
-        </Grid>
-        <Grid item {...rightColumns}>
+        </StyledGrid>
+        <StyledGrid item {...rightColumns}>
           {rightComp}
-        </Grid>
+        </StyledGrid>
       </Container>
-    </section>
+    </Section>
   );
 }
 

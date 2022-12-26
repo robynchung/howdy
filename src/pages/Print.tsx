@@ -11,23 +11,19 @@ function Print() {
   const componentRef = React.useRef<HTMLDivElement>(null);
 
   return (
-    <>
-      <div ref={componentRef}>
-        <div className="container">
-          <NameSection compRef={componentRef} />
+    <div ref={componentRef}>
+      <NameSection compRef={componentRef} />
 
-          <SkillSection />
+      <SkillSection />
 
-          <section style={{ display: "block", margin: "30px 0 " }}>
-            <Title1 title="Work Experience" />
-          </section>
+      <section style={{ display: "block", margin: "30px 0 " }}>
+        <Title1 title="Work Experience" highlight={true} />
+      </section>
 
-          <ExeprienceSection />
+      <ExeprienceSection />
 
-          <EducationSection />
-        </div>
-      </div>
-    </>
+      <EducationSection />
+    </div>
   );
 }
 

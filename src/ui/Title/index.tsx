@@ -30,6 +30,7 @@ const StyledTitle1 = styled(Typography)((props: StyledTitleProps) => {
   const highlight = props.highlight;
 
   return {
+    display: "inline-block",
     backgroundColor: highlight ? colors.highlight : "",
     color: colors.blue,
     fontFamily: fontFace.text,
@@ -77,7 +78,6 @@ function TitleWithOrg({ title, org, range, edu }: TitleWithOrgProps) {
   return (
     <div>
       <StyledTitle2 variant="h3">{title}</StyledTitle2>
-
       <StyledOrg>{org}</StyledOrg>
 
       {range ? <Range location={range?.location} time={range.time} /> : null}

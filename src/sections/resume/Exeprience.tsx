@@ -11,7 +11,7 @@ function ExeprienceSection() {
       .replace(/\[\[/g, `<span class="_bold">`)
       .replace(/\]\]/g, "</span>");
 
-    return <ListItemExp row={initRow} />;
+    return <ListItemExp key={initRow} row={initRow} />;
   };
 
   return (
@@ -19,6 +19,7 @@ function ExeprienceSection() {
       {exp.map((experience) => {
         return (
           <Section
+            key={experience.title}
             leftColumns={{ xs: 2 }}
             rightColumns={{ xs: 10 }}
             leftComp={

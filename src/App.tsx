@@ -1,14 +1,13 @@
 import React from "react";
 
-// sections
+import Web from "pages/Web";
 import Print from "pages/Print";
 
+// sections
+import Menu from "sections/web/Menu";
+
 function App() {
-  return (
-    <>
-      <Print />
-    </>
-  );
+  return <Print />;
 }
 
 export default App;
