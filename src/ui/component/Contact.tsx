@@ -18,7 +18,8 @@ const StyledText = styled(Typography)({
 
 const StyledContainer = styled("div")({
   display: "flex",
-  alignItems: "center",
+  justifyContent: "center",
+  flexDirection: "column",
   height: "100%",
 });
 
@@ -37,7 +38,7 @@ const StyledLink = styled("a")({
 
 function Contact({ isWeb }: Props) {
   return (
-    <StyledContainer>
+    <StyledContainer className="print-contact">
       {!isWeb ? (
         <>
           <StyledText>Greater Toronto Area 519-466-4673</StyledText>

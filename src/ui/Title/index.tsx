@@ -23,7 +23,7 @@ type TitleWithOrgProps = {
 };
 
 type StyledTitleProps = {
-  highlight?: boolean;
+  highlight?: boolean | string;
 };
 
 const StyledTitle1 = styled(Typography)((props: StyledTitleProps) => {
@@ -66,9 +66,9 @@ const StyledOrg = styled(Typography)({
   fontSize: "0.9em",
 });
 
-function Title1({ title, highlight }: TitleProps) {
+function Title({ title, highlight = false }: TitleProps) {
   return (
-    <StyledTitle1 highlight={highlight} variant="h2">
+    <StyledTitle1 highlight={Boolean(highlight)} variant="h2">
       {title}
     </StyledTitle1>
   );
@@ -86,4 +86,4 @@ function TitleWithOrg({ title, org, range, edu }: TitleWithOrgProps) {
   );
 }
 
-export { Title1, TitleWithOrg };
+export { Title, TitleWithOrg };

@@ -2,7 +2,7 @@ import React from "react";
 import Section from "ui/Layout/Section";
 
 import { ListItem } from "ui/List/ListItem";
-import { Title1 } from "ui/Title";
+import { Title } from "ui/Title";
 import skills from "contents/skils.json";
 import highlight from "contents/hightlight.json";
 
@@ -26,7 +26,7 @@ function SkillSection() {
         rightColumns={{ xs: 10 }}
         leftComp={
           <>
-            <Title1 title="Skills" />
+            <Title title="Skills" />
           </>
         }
         rightComp={

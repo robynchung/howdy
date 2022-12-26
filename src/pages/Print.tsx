@@ -4,53 +4,27 @@ import NameSection from "sections/resume/Name";
 import SkillSection from "sections/resume/Skill";
 import ExeprienceSection from "sections/resume/Exeprience";
 import EducationSection from "sections/resume/Education";
-import ReactToPrint from "react-to-print";
+import ResumeContext from "context/ResumeContext";
 
-import { Title1 } from "ui/Title";
-
-const PrintContext = React.createContext({});
+import { Title } from "ui/Title";
 
 function Print() {
-  const componentRef = React.useRef<HTMLDivElement>(null);
-
-  const pageStyle = `
-  @page { 
-    margin: 0;
-  }
-
-  @media print {
-    html {
-      border: solid 10pt #0852ff;
-    }
-
-    .container {
-      border: none
-    }
-  }
-`;
+  const context = React.useContext(ResumeContext.Context);
 
   return (
-    <div ref={componentRef}>
-      <PrintContext.Provider value={{ compRef: componentRef }}>
-        <ReactToPrint
-          pageStyle={pageStyle}
-          trigger={() => <button>Print this out!</button>}
-          content={() => componentRef.current}
-        />
-        {/* 
-        <NameSection compRef={componentRef} />
+    <div ref={context}>
+      <NameSection compRef={context} />
+      {/* <SkillSection /> */}
+      {/* 
+      <section style={{ display: "block", margin: "30px 0 " }}>
+        <Title title="Work Experience" highlight={true} />
+      </section> */}
 
-        <SkillSection />
+      {/* 
 
-        <section style={{ display: "block", margin: "30px 0 " }}>
-          <Title1 title="Work Experience" highlight={true} />
-        </section>
+      <ExeprienceSection />
 
-        <ExeprienceSection />
-
-        <EducationSection />
-      </div> */}
-      </PrintContext.Provider>
+      <EducationSection /> */}
     </div>
   );
 }

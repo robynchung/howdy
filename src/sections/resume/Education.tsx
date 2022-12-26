@@ -1,6 +1,6 @@
 import Section from "ui/Layout/Section";
 
-import { Title1, TitleWithOrg } from "ui/Title";
+import { Title, TitleWithOrg } from "ui/Title";
 import edu from "contents/education.json";
 
 function EducationSection() {
@@ -11,7 +11,7 @@ function EducationSection() {
         rightColumns={{ xs: 10 }}
         leftComp={
           <>
-            <Title1 title="Education" />
+            <Title title="Education" />
           </>
         }
         rightComp={

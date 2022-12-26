@@ -1,17 +1,3 @@
 li {
   list-style: none;
 }
-
-.container {
-  border: solid 20px #0852ff;
-  overflow: auto;
-  height: 100vh;
-}
-
-@media print {
-  .container {
-    overflow: visible;
-    height: auto;
-    border: none;
-  }
-}

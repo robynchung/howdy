@@ -16,12 +16,6 @@ type Props = {
   rightColumns?: Columns;
 };
 
-const Container = styled(Grid)(() => {
-  return {
-    backgroundColor: "#fff",
-  };
-});
-
 const Section = styled("section")({
   width: "100%",
 });
@@ -34,14 +28,14 @@ const StyledGrid = styled(Grid)({
 function Layout({ leftComp, rightComp, leftColumns, rightColumns }: Props) {
   return (
     <Section>
-      <Container container spacing={3}>
+      <Grid container spacing={3}>
         <StyledGrid item {...leftColumns}>
           {leftComp}
         </StyledGrid>
         <StyledGrid item {...rightColumns}>
           {rightComp}
         </StyledGrid>
-      </Container>
+      </Grid>
     </Section>
   );
 }

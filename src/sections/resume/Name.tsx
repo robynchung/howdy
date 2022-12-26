@@ -10,18 +10,12 @@ type Props = {
 };
 
 function NameSection({ compRef }: Props) {
-  console.log({ compRef });
-
   return (
     <>
       <Section
         leftColumns={{ md: 7, sm: 4 }}
         rightColumns={{ md: 5, sm: 8, xs: 12 }}
-        leftComp={
-          <>
-            <Name name="<Aeri Jung />" />
-          </>
-        }
+        leftComp={<Name name="<Aeri Jung />" />}
         rightComp={<Contact isWeb={false} />}
       />
     </>
