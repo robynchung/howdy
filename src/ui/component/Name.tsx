@@ -6,6 +6,9 @@ import { styled } from "@mui/material/styles";
 import Section from "ui/Layout/Section";
 import Name from "ui/Title/Name";
 import Contact from "ui/component/Contact";
+import resume from "assets/resume.pdf";
+
+// import resumeFile from "assets/Aeri_Resume.pdf";
 
 const NameBox = styled("div")(({ theme }) => {
   return {
@@ -49,7 +52,13 @@ function NameSection() {
       rightComp={
         <ContactBox>
           <Contact isWeb={true} />
-          <Button variant="outlined" size="small" startIcon={<SaveAltIcon />}>
+          <Button
+            variant="outlined"
+            size="small"
+            startIcon={<SaveAltIcon />}
+            download={true}
+            href={resume}
+          >
             Download Resume
           </Button>
         </ContactBox>
