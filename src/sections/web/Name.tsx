@@ -49,6 +49,7 @@ function NameSection() {
     @media print {
       html {
         border: solid 5pt #0852ff;
+        padding: 15pt
       }
     }
   `;

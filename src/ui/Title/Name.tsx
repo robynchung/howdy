@@ -18,6 +18,12 @@ const StyledName = styled(Typography)(({ theme }) => {
     [theme.breakpoints.down("sm")]: {
       fontSize: "3em",
     },
+
+    "@media print": {
+      fontSize: "43pt",
+      letterSpacing: "-0.04em",
+      marginLeft: "10pt",
+    },
   };
 });
 

@@ -20,28 +20,18 @@ function SkillSection() {
   };
 
   return (
-    <>
-      <Section
-        leftColumns={{ xs: 2 }}
-        rightColumns={{ xs: 10 }}
-        leftComp={
-          <>
-            <Title title="Skills" />
-          </>
-        }
-        rightComp={
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            {Object.entries(skills).map(([key, values]) => {
-              return (
-                <ul key={key} style={{ border: "solid 1px" }}>
-                  {renderRow(values)}
-                </ul>
-              );
-            })}
-          </div>
-        }
-      />
-    </>
+    <Section
+      leftColumns={{ xs: 2 }}
+      rightColumns={{ xs: 10 }}
+      leftComp={<Title title="Skills" highlight={false} />}
+      rightComp={
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          {Object.entries(skills).map(([key, values]) => {
+            return <ul key={key}>{renderRow(values)}</ul>;
+          })}
+        </div>
+      }
+    />
   );
 }
 

@@ -14,7 +14,7 @@ function Print() {
   return (
     <div ref={context}>
       <NameSection compRef={context} />
-      {/* <SkillSection /> */}
+      <SkillSection />
       {/* 
       <section style={{ display: "block", margin: "30px 0 " }}>
         <Title title="Work Experience" highlight={true} />

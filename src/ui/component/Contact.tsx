@@ -14,6 +14,10 @@ const StyledText = styled(Typography)({
   fontFamily: fontFace.text,
   fontWeight: 600,
   fontSize: "0.8em",
+
+  "@media print": {
+    color: colors.range,
+  },
 });
 
 const StyledContainer = styled("div")({
@@ -33,6 +37,10 @@ const StyledLink = styled("a")({
   "&:hover": {
     cursor: "pointer",
     textDecoration: "underline",
+  },
+
+  "@media print": {
+    color: colors.blue,
   },
 });
 

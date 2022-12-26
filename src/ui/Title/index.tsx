@@ -66,9 +66,9 @@ const StyledOrg = styled(Typography)({
   fontSize: "0.9em",
 });
 
-function Title({ title, highlight = false }: TitleProps) {
+function Title({ title, highlight }: TitleProps) {
   return (
-    <StyledTitle1 highlight={Boolean(highlight)} variant="h2">
+    <StyledTitle1 highlight={highlight || undefined} variant="h2">
       {title}
     </StyledTitle1>
   );
