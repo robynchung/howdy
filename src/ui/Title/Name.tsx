@@ -7,11 +7,18 @@ type Props = {
   name: string;
 };
 
-const StyledName = styled(Typography)({
-  fontFamily: fontFace.code,
-  fontWeight: 800,
-  fontSize: "5em",
-  color: colors.blue,
+const StyledName = styled(Typography)(({ theme }) => {
+  return {
+    fontFamily: fontFace.code,
+    fontWeight: 800,
+    letterSpacing: "-0.04em",
+    fontSize: "4.2em",
+    color: colors.blue,
+
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "3em",
+    },
+  };
 });
 
 function Name({ name }: Props) {

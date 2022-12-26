@@ -1,31 +1,15 @@
 import React from "react";
+import ReactToPrint from "react-to-print";
+import Web from "pages/Web";
+import Print from "pages/Print";
 
 // sections
-import NameSection from "sections/NameSection";
-import SkillSection from "sections/SkillSection";
-import ExeprienceSection from "./sections/ExeprienceSection";
-import { Title1 } from "ui/Title";
+import Menu from "sections/web/Menu";
+
+const PrintContext = React.createContext({});
 
 function App() {
-  const componentRef = React.useRef<HTMLDivElement>(null);
-
-  return (
-    <>
-      <div ref={componentRef}>
-        <div className="container">
-          <NameSection compRef={componentRef} />
-
-          <SkillSection />
-
-          <section style={{ display: "block", margin: "30px 0 " }}>
-            <Title1 title="Work Experience" />
-          </section>
-
-          <ExeprienceSection />
-        </div>
-      </div>
-    </>
-  );
+  return <Web />;
 }
 
 export default App;

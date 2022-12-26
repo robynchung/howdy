@@ -51,5 +51,79 @@
       "Worked independently and collaborated with team members in remote oﬃces.",
       "Built a [[Electron]] Desktop application with [[React]]."
     ]
+  },
+
+  {
+    "title": "Front-End Developer",
+    "org": "TMRRW inc.",
+    "range": {
+      "location": "Sarnia, ON",
+      "time": "Mar ~ Dec 2018"
+    },
+    "details": [
+      "Implemented [[Single-Page Application]] using [[React, Redux and Firebase.]]",
+      "Integrated [[REST and third-party API]]s such as Stripe, Google Map, Facebook authentication and Uploadcare with [[React web application.]]",
+      "Shared source code on [[Github]] with development team."
+    ]
+  },
+
+  {
+    "title": "Front-End Developer / Brand Designer / Web Design volunteer",
+    "org": "The CUBE SarniaTech",
+    "range": {
+      "location": "Sarnia, ON",
+      "time": "Sep ~ Nov 2017"
+    },
+    "details": [
+      "Designed SarniaTech brand to increase awareness of tech industry in Sarnia.",
+      "Developed [[a Responsive website]] using [[Bulma CSS3]] framework, [[jQuery]] Javascript library and GreenSock for advanced Javascript animation.",
+      "Designed [[Responsive website.]]",
+      "Improved [[UI Design]] and implementation of an existing website. "
+    ]
+  },
+
+  {
+    "title": "Front-End Developer Contractor",
+    "org": "Daekyo Eye Level Education<br/>Hana Bank<br/>Incheon Airport<br/>Hyundai Securities Co.",
+    "range": {
+      "location": "Seoul, South Korea",
+      "time": "Dec 2014 ~ Aug 2017"
+    },
+    "details": [
+      "Modernized table based layout using clean and intuitive [[HTML5, CSS3]] styles and [[jQuery.]]",
+      "Managed and delivered products on time.",
+      "Redesigned existing web-apps to improve [[user experience]] using responsive design principles.",
+      "Maintainedexistingwebsiteandworkedcloselywithdesignersandback-enddevelopers."
+    ]
+  },
+
+  {
+    "title": "Front-End Developer / Web, Mobile and Brand Designer",
+    "org": "WIZWIN DIGITAL Software",
+    "range": {
+      "location": "Seoul, South Korea",
+      "time": "Jan ~ Dec 2014"
+    },
+    "details": [
+      "Planned and designed websites and [[mobile responsive websites.]]",
+      "Analyzed and [[reduced program development time.]]",
+      "Worked closely with project managers on business requirements and technical speciﬁcations.",
+      "Created [[cross-platform Mobile Application]] with [[HTML5, CSS3]] and [[jQuery mobile.]]",
+      "[[Designed brand identity]] with marketing strategies."
+    ]
+  },
+
+  {
+    "title": "Design Director",
+    "org": "mVibo.com",
+    "range": {
+      "location": "Los Angeles, CA",
+      "time": "Jun 2011 ~ Jan 2013"
+    },
+    "details": [
+      "Managed and directed all design services (producing videos, editorials, and website designs)",
+      "Designed and maintained the company’s website, landing pages, email templates, and banner ads.",
+      "Collaborated with a development team to ensure designs ﬁt within the brand standards and identity."
+    ]
   }
 ]

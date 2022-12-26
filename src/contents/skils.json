@@ -1,6 +1,6 @@
-[
-  [
-    "React / Redux / Recoil ",
+{
+  "recent": [
+    "React / Redux / Recoil",
     "React Native",
     "Javascript / ES6+ ",
     "Amazon AWS / DynamoDB ",
@@ -10,7 +10,7 @@
     "Webpack"
   ],
 
-  [
+  "design": [
     "HTML5 / CSS3 / SCSS",
     "JQuery/JSON",
     "Github / GitLab / Bitbucket / Jira",
@@ -19,11 +19,11 @@
     "Adobe Flash"
   ],
 
-  [
+  "personality": [
     "Work independently ",
     "Self-Starter",
     "Hard working",
     "Team oriented",
     "Adapt and learn rapidly evolving tech stack"
   ]
-]
+}

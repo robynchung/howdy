@@ -1,4 +1,4 @@
-import Layout from "ui/Layout";
+import Section from "ui/Layout/Section";
 
 import { ListItemExp } from "ui/List/ListItem";
 import { TitleWithOrg } from "ui/Title";
@@ -11,14 +11,15 @@ function ExeprienceSection() {
       .replace(/\[\[/g, `<span class="_bold">`)
       .replace(/\]\]/g, "</span>");
 
-    return <ListItemExp row={initRow} />;
+    return <ListItemExp key={initRow} row={initRow} />;
   };
 
   return (
     <>
       {exp.map((experience) => {
         return (
-          <Layout
+          <Section
+            key={experience.title}
             leftColumns={{ xs: 2 }}
             rightColumns={{ xs: 10 }}
             leftComp={
