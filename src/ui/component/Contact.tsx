@@ -3,8 +3,6 @@ import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 import { colors, fontFace } from "constants/styles";
 
-import cursor from "assets/cursor.png";
-
 type Props = {
   isWeb: boolean;
 };

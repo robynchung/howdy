@@ -1,7 +1,7 @@
 import React from "react";
-
-import NameSection from "sections/Name";
 import { styled } from "@mui/system";
+
+import NameSection from "ui/component/Name";
 
 const Container = styled("div")({
   display: "flex",
@@ -16,7 +16,6 @@ const Container = styled("div")({
 function Home() {
   return (
     <Container>
-      {/* <Menu /> */}
       <NameSection />
     </Container>
   );
