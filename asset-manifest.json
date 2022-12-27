@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.js": "/howdy/static/js/main.fdced7c3.js",
-    "static/js/787.54c84798.chunk.js": "/howdy/static/js/787.54c84798.chunk.js",
-    "static/media/resume.pdf": "/howdy/static/media/resume.b2134fcbe5767447cb29.pdf",
+    "main.css": "/howdy/static/css/main.073c9b0a.css",
+    "main.js": "/howdy/static/js/main.6b07a583.js",
+    "static/js/787.6a43309c.chunk.js": "/howdy/static/js/787.6a43309c.chunk.js",
+    "static/media/logo.svg": "/howdy/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/howdy/index.html",
-    "main.fdced7c3.js.map": "/howdy/static/js/main.fdced7c3.js.map",
-    "787.54c84798.chunk.js.map": "/howdy/static/js/787.54c84798.chunk.js.map"
+    "main.073c9b0a.css.map": "/howdy/static/css/main.073c9b0a.css.map",
+    "main.6b07a583.js.map": "/howdy/static/js/main.6b07a583.js.map",
+    "787.6a43309c.chunk.js.map": "/howdy/static/js/787.6a43309c.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.fdced7c3.js"
+    "static/css/main.073c9b0a.css",
+    "static/js/main.6b07a583.js"
   ]
 }
