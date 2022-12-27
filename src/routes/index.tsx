@@ -1,4 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
+import Typewriter from "typewriter-effect";
 
 import type { RouteObject } from "react-router-dom";
 
@@ -17,7 +18,24 @@ export function Layout() {
 }
 
 export function Home() {
-  return <div style={{ backgroundColor: "red" }}>home</div>;
+  return (
+    <div style={{ backgroundColor: "red" }}>
+      <Typewriter
+        options={{
+          strings: [
+            "Aeri Jung",
+            "I do Front-end",
+            "also Back-end",
+            "so ...",
+            "I do Full-Stack!",
+          ],
+          autoStart: true,
+          loop: true,
+          deleteSpeed: 100,
+        }}
+      />
+    </div>
+  );
 }
 
 export function About() {
