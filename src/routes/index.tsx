@@ -1,46 +1,9 @@
-import { Outlet } from "react-router-dom";
-import Typewriter from "typewriter-effect";
-
 import type { RouteObject } from "react-router-dom";
 
-// styles
-import Container from "components/Layout/Container";
-import Menu from "components/common/Menu";
+import Home from "pages/Home";
 
-// data
-import menuList from "data/menu.json";
-
-export function Layout() {
-  return (
-    <Container>
-      <>
-        <Menu menuList={menuList} />
-        <Outlet />
-      </>
-    </Container>
-  );
-}
-
-export function Home() {
-  return (
-    <div style={{ backgroundColor: "red" }}>
-      <Typewriter
-        options={{
-          strings: [
-            "Aeri Jung",
-            "I do Front-end",
-            "also Back-end",
-            "so ...",
-            "I do Full-Stack!",
-          ],
-          autoStart: true,
-          loop: true,
-          deleteSpeed: 100,
-        }}
-      />
-    </div>
-  );
-}
+// styles & components
+import Layout from "components/Layout";
 
 export function About() {
   return <div style={{ backgroundColor: "blue" }}>about</div>;
