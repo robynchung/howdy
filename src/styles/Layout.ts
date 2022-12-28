@@ -14,13 +14,15 @@ export const StyledContainer = styled(Grid)({
 });
 
 // pages
-export const StyledPageContainer = styled(Grid)(({ theme }) => {
+export const StyledPageContainer = styled("div")(({ theme }) => {
   return {
     padding: 25,
+    minHeight: "65%",
+    width: "100%",
   };
 });
 
-export const StyledPageTitleBox = styled(Grid)(({ theme }) => {
+export const StyledPageTitleBox = styled("div")(({ theme }) => {
   return {
     display: "flex",
     justifyContent: "flex-end",
@@ -35,6 +37,7 @@ export const StyledTitle = styled("span")(({ theme }) => {
   return {
     borderBottom: `solid 10px ${colors.blue}`,
     minWidth: 300,
+    textAlign: "right",
     fontSize: "3em",
     fontWeight: 800,
     color: colors.blue,

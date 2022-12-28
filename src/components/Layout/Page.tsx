@@ -1,5 +1,3 @@
-import Grid from "@mui/material/Grid";
-
 import {
   StyledPageContainer,
   StyledPageTitleBox,
@@ -13,13 +11,11 @@ type Props = {
 
 function Page({ title, contents }: Props) {
   return (
-    <StyledPageContainer container spacing={5}>
-      <StyledPageTitleBox item md={5} xs={12}>
+    <StyledPageContainer>
+      <StyledPageTitleBox>
         <StyledTitle>{title}</StyledTitle>
       </StyledPageTitleBox>
-      <Grid item md={7} xs={12}>
-        {contents}
-      </Grid>
+      <div>{contents}</div>
     </StyledPageContainer>
   );
 }
