@@ -1,11 +1,10 @@
 import Typewriter from "typewriter-effect";
 import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 
 import { colors, fontFace } from "constants/styles";
 
-const StyledName = styled(Typography)(({ theme }) => {
+const StyledName = styled("span")(({ theme }) => {
   return {
     fontFamily: fontFace.code,
     fontWeight: 800,
