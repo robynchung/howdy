@@ -1,21 +1,33 @@
 import React from "react";
-import Drawer from "@mui/material/Drawer";
-import DragHandleIcon from "@mui/icons-material/DragHandle";
 import { Link } from "react-router-dom";
+import DragHandleIcon from "@mui/icons-material/DragHandle";
+import Drawer from "@mui/material/Drawer";
+import FileDownloadIcon from "@mui/icons-material/FileDownload";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import Grid from "@mui/material/Grid";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import MailIcon from "@mui/icons-material/Mail";
+import { saveAs } from "file-saver";
 
 // components
 import useMenu from "hooks/useMenu";
+import social from "data/social.json";
+import resumeFile from "assets/resume.pdf";
 
 // styles & types
-import { StyledIconContainer } from "styles/Menu";
-import type { MenuProps, IconProps } from "types/menu";
+import {
+  StyledFloatContainer,
+  StyledIconContainer,
+  StyledButton,
+} from "styles/Menu";
+import type { MenuProps, IconProps, SocialProps } from "types/menu";
 
 function Menu({ menuList }: MenuProps) {
   const { toggleDrawer, state } = useMenu();
 
   return (
     <>
-      <MenuIcon handleToggle={() => toggleDrawer(true)} />
+      <FloatContainer handleToggle={() => toggleDrawer(true)} />
 
       <Drawer anchor={"right"} open={state} onClose={() => toggleDrawer(false)}>
         {menuList.map((menu) => {
@@ -30,15 +42,64 @@ function Menu({ menuList }: MenuProps) {
   );
 }
 
-function MenuIcon({ handleToggle }: IconProps) {
+function Social({ socialList }: SocialProps) {
+  const renderSocialIcon = (name: string): JSX.Element | null => {
+    switch (name) {
+      case "linked-in":
+        return <LinkedInIcon color="primary" fontSize="small" />;
+
+      case "github":
+        return <GitHubIcon color="primary" fontSize="small" />;
+
+      case "email":
+        return <MailIcon color="primary" fontSize="small" />;
+
+      default:
+        return null;
+    }
+  };
+
+  const downloadResume = () => {
+    saveAs(resumeFile, "Aeri_Jung.pdf");
+  };
+
   return (
-    <StyledIconContainer>
+    <StyledIconContainer container spacing={2} alignItems="center">
+      {socialList.map((social) => {
+        const icon = renderSocialIcon(social.name);
+
+        return (
+          <Grid item key={social.name}>
+            <a href={social.link} target="_blank" rel="noreferrer">
+              {icon}
+            </a>
+          </Grid>
+        );
+      })}
+      <Grid item style={{ display: "flex", alignItems: "center" }}>
+        <StyledButton
+          variant="outlined"
+          size="small"
+          startIcon={<FileDownloadIcon />}
+          onClick={downloadResume}
+        >
+          Download CV
+        </StyledButton>
+      </Grid>
+    </StyledIconContainer>
+  );
+}
+
+function FloatContainer({ handleToggle }: IconProps) {
+  return (
+    <StyledFloatContainer>
+      <Social socialList={social} />
       <DragHandleIcon
         color="primary"
         fontSize="large"
         onClick={() => handleToggle(true)}
       />
-    </StyledIconContainer>
+    </StyledFloatContainer>
   );
 }
 

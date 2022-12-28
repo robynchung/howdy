@@ -7,6 +7,15 @@ const theme = createTheme({
   },
 
   components: {
+    // global style
+    MuiCssBaseline: {
+      styleOverrides: (theme) => `
+        * { 
+          transition: all 0.5s ease-in-out;
+        }
+      `,
+    },
+
     MuiTypography: {
       styleOverrides: {
         root: {
@@ -17,9 +26,11 @@ const theme = createTheme({
       },
     },
 
-    MuiIcon: {
+    MuiSvgIcon: {
       styleOverrides: {
-        colorPrimary: colors.blue,
+        root: {
+          color: colors.blue,
+        },
       },
     },
 
