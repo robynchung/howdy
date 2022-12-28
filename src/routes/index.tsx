@@ -11,11 +11,11 @@ export function About() {
 }
 
 export function Skills() {
-  return <div style={{ backgroundColor: "purple" }}>skills</div>;
+  return <Page title="Skills" contents={<>ddd</>} />;
 }
 
 export function Contact() {
-  return <div style={{ backgroundColor: "pink" }}>contact</div>;
+  return <Page title="Contact" contents={<>ddd</>} />;
 }
 
 let routes: RouteObject[] = [

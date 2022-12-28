@@ -26,6 +26,7 @@ export const StyledPageTitleBox = styled("div")(({ theme }) => {
   return {
     display: "flex",
     justifyContent: "flex-end",
+    marginBottom: 50,
 
     [theme.breakpoints.down("md")]: {
       justifyContent: "flex-start",
