@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 // components
 import useMenu from "hooks/useMenu";
 
-//
+// styles & types
 import { StyledIconContainer } from "styles/Menu";
 import type { MenuProps, IconProps } from "types/menu";
 
