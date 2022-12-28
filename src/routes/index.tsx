@@ -1,42 +1,9 @@
-import { Outlet, Link } from "react-router-dom";
-import Typewriter from "typewriter-effect";
-
 import type { RouteObject } from "react-router-dom";
 
-export function Layout() {
-  return (
-    <div>
-      <Link to={"/"}>Home</Link>
-      <Link to={"/about"}>About</Link>
-      <Link to={"/skills"}>skills</Link>
-      <Link to={"/contact"}>contact</Link>
-      <div>
-        <Outlet />
-      </div>
-    </div>
-  );
-}
+import Home from "pages/Home";
 
-export function Home() {
-  return (
-    <div style={{ backgroundColor: "red" }}>
-      <Typewriter
-        options={{
-          strings: [
-            "Aeri Jung",
-            "I do Front-end",
-            "also Back-end",
-            "so ...",
-            "I do Full-Stack!",
-          ],
-          autoStart: true,
-          loop: true,
-          deleteSpeed: 100,
-        }}
-      />
-    </div>
-  );
-}
+// styles & components
+import Layout from "components/Layout";
 
 export function About() {
   return <div style={{ backgroundColor: "blue" }}>about</div>;
