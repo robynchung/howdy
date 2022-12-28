@@ -7,10 +7,12 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Grid from "@mui/material/Grid";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
+import { saveAs } from "file-saver";
 
 // components
 import useMenu from "hooks/useMenu";
 import social from "data/social.json";
+import resumeFile from "assets/resume.pdf";
 
 // styles & types
 import {
@@ -57,6 +59,10 @@ function Social({ socialList }: SocialProps) {
     }
   };
 
+  const downloadResume = () => {
+    saveAs(resumeFile, "Aeri_Jung.pdf");
+  };
+
   return (
     <StyledIconContainer container spacing={2} alignItems="center">
       {socialList.map((social) => {
@@ -75,6 +81,7 @@ function Social({ socialList }: SocialProps) {
           variant="outlined"
           size="small"
           startIcon={<FileDownloadIcon />}
+          onClick={downloadResume}
         >
           Download CV
         </StyledButton>
