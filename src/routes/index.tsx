@@ -35,7 +35,7 @@ let routes: RouteObject[] = [
         path: "/contact",
         element: <Contact />,
       },
-      { path: "*", element: <div>dddd</div> },
+      { path: "*", element: <Home /> },
     ],
   },
 ];
