@@ -1,10 +1,11 @@
 import React from "react";
-import Drawer from "@mui/material/Drawer";
-import DragHandleIcon from "@mui/icons-material/DragHandle";
 import { Link } from "react-router-dom";
+import DragHandleIcon from "@mui/icons-material/DragHandle";
+import Drawer from "@mui/material/Drawer";
+import FileDownloadIcon from "@mui/icons-material/FileDownload";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import Grid from "@mui/material/Grid";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import MailIcon from "@mui/icons-material/Mail";
 
 // components
@@ -12,7 +13,11 @@ import useMenu from "hooks/useMenu";
 import social from "data/social.json";
 
 // styles & types
-import { StyledFloatContainer, StyledIconContainer } from "styles/Menu";
+import {
+  StyledFloatContainer,
+  StyledIconContainer,
+  StyledButton,
+} from "styles/Menu";
 import type { MenuProps, IconProps, SocialProps } from "types/menu";
 
 function Menu({ menuList }: MenuProps) {
@@ -53,7 +58,7 @@ function Social({ socialList }: SocialProps) {
   };
 
   return (
-    <StyledIconContainer container spacing={1}>
+    <StyledIconContainer container spacing={2} alignItems="center">
       {socialList.map((social) => {
         const icon = renderSocialIcon(social.name);
 
@@ -65,6 +70,15 @@ function Social({ socialList }: SocialProps) {
           </Grid>
         );
       })}
+      <Grid item style={{ display: "flex", alignItems: "center" }}>
+        <StyledButton
+          variant="outlined"
+          size="small"
+          startIcon={<FileDownloadIcon />}
+        >
+          Download CV
+        </StyledButton>
+      </Grid>
     </StyledIconContainer>
   );
 }

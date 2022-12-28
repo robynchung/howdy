@@ -1,4 +1,5 @@
 import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
 import { styled } from "@mui/system";
 
 export const StyledFloatContainer = styled("div")({
@@ -12,4 +13,8 @@ export const StyledFloatContainer = styled("div")({
 
 export const StyledIconContainer = styled(Grid)({
   marginRight: 25,
+});
+
+export const StyledButton = styled(Button)({
+  marginBottom: 4,
 });
