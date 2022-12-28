@@ -1,12 +1,13 @@
 import type { RouteObject } from "react-router-dom";
 
 import Home from "pages/Home";
+import Page from "components/Layout/Page";
 
 // styles & components
 import Layout from "components/Layout";
 
 export function About() {
-  return <div style={{ backgroundColor: "blue" }}>about</div>;
+  return <Page title="About" contents={<>ddd</>} />;
 }
 
 export function Skills() {

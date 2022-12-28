@@ -49,7 +49,11 @@ function Menu({ menuList }: MenuProps) {
         <StyledMenuListBox>
           {menuList.map((menu) => {
             return (
-              <Link key={menu.to} to={menu.to}>
+              <Link
+                key={menu.to}
+                to={menu.to}
+                onClick={() => toggleDrawer(false)}
+              >
                 {menu.name}
               </Link>
             );
