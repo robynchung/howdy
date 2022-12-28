@@ -1,5 +1,4 @@
 import React from "react";
-import Menu from "components/common/Menu";
 
 import "./App.css";
 import { useLocation, useRoutes } from "react-router-dom";
