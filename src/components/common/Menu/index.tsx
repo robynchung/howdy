@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import useMenu from "hooks/useMenu";
 
 // styles & types
-import { StyledIconContainer } from "styles/Menu";
+import { StyledFloatContainer } from "styles/Menu";
 import type { MenuProps, IconProps } from "types/menu";
 
 function Menu({ menuList }: MenuProps) {
@@ -15,7 +15,7 @@ function Menu({ menuList }: MenuProps) {
 
   return (
     <>
-      <MenuIcon handleToggle={() => toggleDrawer(true)} />
+      <FloatContainer handleToggle={() => toggleDrawer(true)} />
 
       <Drawer anchor={"right"} open={state} onClose={() => toggleDrawer(false)}>
         {menuList.map((menu) => {
@@ -30,15 +30,16 @@ function Menu({ menuList }: MenuProps) {
   );
 }
 
-function MenuIcon({ handleToggle }: IconProps) {
+function FloatContainer({ handleToggle }: IconProps) {
   return (
-    <StyledIconContainer>
+    <StyledFloatContainer>
+      <div>ddd</div>
       <DragHandleIcon
         color="primary"
         fontSize="large"
         onClick={() => handleToggle(true)}
       />
-    </StyledIconContainer>
+    </StyledFloatContainer>
   );
 }
 
