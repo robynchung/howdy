@@ -18,6 +18,9 @@ const theme = createTheme({
 
     MuiTypography: {
       styleOverrides: {
+        body1: {
+          lineHeight: 1.8,
+        },
         root: {
           fontFamily: fontFace.text,
           fontSize: "2em",
