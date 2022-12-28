@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import DragHandleIcon from "@mui/icons-material/DragHandle";
-import Drawer from "@mui/material/Drawer";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Grid from "@mui/material/Grid";
@@ -24,7 +23,6 @@ import {
   StyledCloseBox,
   StyledDrawer,
   StyledMenuListBox,
-  StyledMenuListContainer,
 } from "styles/Menu";
 import type { MenuProps, IconProps, SocialProps } from "types/menu";
 
@@ -39,30 +37,24 @@ function Menu({ menuList }: MenuProps) {
         anchor={"right"}
         open={state}
         onClose={() => toggleDrawer(false)}
-        style={{
-          width: "100%",
-        }}
-        sx={{ width: "100%" }}
       >
-        <StyledMenuListContainer container>
-          <StyledCloseBox item xs={12} flexShrink={0}>
-            <CloseIcon
-              color="primary"
-              fontSize="large"
-              onClick={() => toggleDrawer(false)}
-            />
-          </StyledCloseBox>
+        <StyledCloseBox>
+          <CloseIcon
+            color="primary"
+            fontSize="large"
+            onClick={() => toggleDrawer(false)}
+          />
+        </StyledCloseBox>
 
-          <StyledMenuListBox item xs={12} flexShrink={3}>
-            {menuList.map((menu) => {
-              return (
-                <Link key={menu.to} to={menu.to}>
-                  {menu.name}
-                </Link>
-              );
-            })}
-          </StyledMenuListBox>
-        </StyledMenuListContainer>
+        <StyledMenuListBox>
+          {menuList.map((menu) => {
+            return (
+              <Link key={menu.to} to={menu.to}>
+                {menu.name}
+              </Link>
+            );
+          })}
+        </StyledMenuListBox>
       </StyledDrawer>
     </>
   );
