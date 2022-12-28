@@ -5,10 +5,20 @@ export const StyledContainer = styled("div")({
   justifyContent: "flex-end",
 });
 
-export const StyledBox = styled("div")({
-  width: "70%",
+export const StyledBox = styled("div")(({ theme }) => {
+  return {
+    width: "70%",
 
-  "& .MuiTypography-root": {
-    textAlign: "right",
-  },
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+    },
+
+    "& .MuiTypography-root": {
+      textAlign: "right",
+
+      [theme.breakpoints.down("md")]: {
+        textAlign: "left",
+      },
+    },
+  };
 });

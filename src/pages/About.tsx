@@ -6,17 +6,24 @@ function About() {
     <StyledContainer>
       <StyledBox>
         <Paragraph>
-          Hello! My name is Aeri and I enjoy creating things that live on the
-          internet. My interest in web development started back in 2012 when I
-          decided to try editing custom Tumblr themes — turns out hacking
-          together a custom reblog button taught me a lot about HTML & CSS!
-          Fast-forward to today, and I’ve had the privilege of working at an
-          advertising agency, a start-up, a huge corporation, and a student-led
-          design studio. My main focus these days is building accessible,
-          inclusive products and digital experiences at Upstatement for a
-          variety of clients. I also recently launched a course that covers
-          everything you need to build a web app with the Spotify API using Node
-          & React. Here are a few technologies I’ve been working with recently:
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of
+          the printing and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since the 1500s, when an unknown
+          printer took a galley of type and scrambled it to make a type specimen
+          book. It has survived not only five centuries, but also the leap into
+          electronic typesetting, remaining essentially unchanged. It was
+          popularised in the 1960s with the release of Letraset sheets
+          containing Lorem Ipsum passages, and more recently with desktop
+          publishing software like Aldus PageMaker including versions of Lorem
+          Ipsum.
         </Paragraph>
       </StyledBox>
     </StyledContainer>
