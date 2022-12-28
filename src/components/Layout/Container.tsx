@@ -1,23 +1,8 @@
-import Grid from "@mui/material/Grid";
+import { StyledContainer } from "styles/Layout";
 
-import { styled } from "@mui/system";
+import type { ContainerProps } from "types/layout";
 
-const StyledContainer = styled(Grid)({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  flexDirection: "column",
-  position: "relative",
-  border: "solid 20px #0852ff",
-  overflow: "auto",
-  height: "100vh",
-});
-
-type Props = {
-  children: JSX.Element;
-};
-
-function Container({ children }: Props) {
+function Container({ children }: ContainerProps) {
   return <StyledContainer container>{children}</StyledContainer>;
 }
 
