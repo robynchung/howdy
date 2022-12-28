@@ -17,6 +17,12 @@ const theme = createTheme({
       },
     },
 
+    MuiIcon: {
+      styleOverrides: {
+        colorPrimary: colors.blue,
+      },
+    },
+
     MuiButton: {
       styleOverrides: {
         root: {

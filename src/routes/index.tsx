@@ -3,17 +3,21 @@ import Typewriter from "typewriter-effect";
 
 import type { RouteObject } from "react-router-dom";
 
+// styles
+import Container from "components/Layout/Container";
+import Menu from "components/common/Menu";
+
+// data
+import menuList from "data/menu.json";
+
 export function Layout() {
   return (
-    <div>
-      <Link to={"/"}>Home</Link>
-      <Link to={"/about"}>About</Link>
-      <Link to={"/skills"}>skills</Link>
-      <Link to={"/contact"}>contact</Link>
-      <div>
+    <Container>
+      <>
+        <Menu menuList={menuList} />
         <Outlet />
-      </div>
-    </div>
+      </>
+    </Container>
   );
 }
 
