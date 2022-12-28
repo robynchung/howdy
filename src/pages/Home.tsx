@@ -1,6 +1,7 @@
 import Typewriter from "typewriter-effect";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/system";
+import Typography from "@mui/material/Typography";
 
 import { colors, fontFace } from "constants/styles";
 
@@ -11,9 +12,11 @@ const StyledName = styled("span")(({ theme }) => {
     letterSpacing: "-0.04em",
     fontSize: "4.2em",
     color: colors.blue,
+    textAlign: "right",
 
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       fontSize: "2.8em",
+      textAlign: "center",
     },
   };
 });
@@ -22,9 +25,50 @@ const StyledNameBox = styled(Grid)(({ theme }) => {
   return {
     display: "flex",
     justifyContent: "right",
+    flexDirection: "column",
 
     [theme.breakpoints.down("md")]: {
       justifyContent: "center",
+    },
+  };
+});
+
+const StyledAnimationTxt = styled("div")(({ theme }) => {
+  return {
+    textAlign: "right",
+    fontWeight: 800,
+    color: colors.blue,
+
+    "& .Typewriter__wrapper": {
+      width: "100%",
+      backgroundColor: colors.highlight,
+    },
+
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+    },
+  };
+});
+
+const StyledIntroBox = styled(Grid)(({ theme }) => {
+  return {
+    display: "flex",
+    alignItems: "center",
+
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "center",
+    },
+  };
+});
+
+const StyledAbout = styled(Typography)(({ theme }) => {
+  return {
+    color: colors.range,
+    fontSize: 13,
+
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+      padding: 30,
     },
   };
 });
@@ -33,13 +77,13 @@ const currentYear = new Date();
 
 function Home() {
   return (
-    <Grid container>
-      <StyledNameBox item sm={6} xs={12}>
-        <StyledName>
+    <Grid container spacing={4}>
+      <StyledNameBox item md={6} xs={12}>
+        <StyledName>Aeri Jung</StyledName>
+        <StyledAnimationTxt>
           <Typewriter
             options={{
               strings: [
-                "Aeri Jung",
                 "I do Front-end",
                 "also Back-end",
                 "so ...",
@@ -50,17 +94,17 @@ function Home() {
               deleteSpeed: 100,
             }}
           />
-        </StyledName>
+        </StyledAnimationTxt>
       </StyledNameBox>
-      <Grid item sm={6}>
-        <p>
+      <StyledIntroBox item md={6} xs={12}>
+        <StyledAbout>
           {currentYear.getFullYear() - 2019}+ years of experience in frontend
           development.
           <br />
           My mission is to design and develop a website that you and your
           audience love.
-        </p>
-      </Grid>
+        </StyledAbout>
+      </StyledIntroBox>
     </Grid>
   );
 }
