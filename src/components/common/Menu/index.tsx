@@ -58,7 +58,7 @@ function Social({ socialList }: SocialProps) {
         const icon = renderSocialIcon(social.name);
 
         return (
-          <Grid item>
+          <Grid item key={social.name}>
             <a href={social.link} target="_blank" rel="noreferrer">
               {icon}
             </a>
