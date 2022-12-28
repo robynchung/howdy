@@ -1,57 +1,23 @@
 import React from "react";
 import Drawer from "@mui/material/Drawer";
-import { Link } from "react-router-dom";
-import Icon from "@mui/material/Icon";
-
-import { styled } from "@mui/system";
-
 import DragHandleIcon from "@mui/icons-material/DragHandle";
+import { Link } from "react-router-dom";
 
-type Anchor = string;
-type MenuType = {
-  to: string;
-  name: string;
-};
+// components
+import useMenu from "hooks/useMenu";
 
-type Props = {
-  menuList: Array<MenuType>;
-};
+//
+import { StyledIconContainer } from "styles/Menu";
+import type { MenuProps, IconProps } from "types/menu";
 
-type IconProps = {
-  handleToggle: (event: React.MouseEvent) => void;
-};
-
-const StyledIconContainer = styled("div")({
-  position: "absolute",
-  top: 20,
-  right: 20,
-});
-
-function Menu({ menuList }: Props) {
-  const [state, setState] = React.useState(false);
-
-  const toggleDrawer =
-    (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
-      if (
-        event.type === "keydown" &&
-        ((event as React.KeyboardEvent).key === "Tab" ||
-          (event as React.KeyboardEvent).key === "Shift")
-      ) {
-        return;
-      }
-
-      setState(open);
-    };
-
-  const handleToggle = React.useCallback((event: React.MouseEvent) => {
-    toggleDrawer(true)(event);
-  }, []);
+function Menu({ menuList }: MenuProps) {
+  const { toggleDrawer, state } = useMenu();
 
   return (
     <>
-      <MenuIcon handleToggle={handleToggle} />
+      <MenuIcon handleToggle={() => toggleDrawer(true)} />
 
-      <Drawer anchor={"right"} open={state} onClose={toggleDrawer(false)}>
+      <Drawer anchor={"right"} open={state} onClose={() => toggleDrawer(false)}>
         {menuList.map((menu) => {
           return (
             <Link key={menu.to} to={menu.to}>
@@ -67,7 +33,11 @@ function Menu({ menuList }: Props) {
 function MenuIcon({ handleToggle }: IconProps) {
   return (
     <StyledIconContainer>
-      <DragHandleIcon color="primary" fontSize="large" onClick={handleToggle} />
+      <DragHandleIcon
+        color="primary"
+        fontSize="large"
+        onClick={() => handleToggle(true)}
+      />
     </StyledIconContainer>
   );
 }
