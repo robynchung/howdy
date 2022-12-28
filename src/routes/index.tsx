@@ -1,20 +1,22 @@
 import type { RouteObject } from "react-router-dom";
 
 import Home from "pages/Home";
+import About from "pages/About";
+
 import Page from "components/Layout/Page";
 
 // styles & components
 import Layout from "components/Layout";
 
-export function About() {
-  return <Page title="About" contents={<>ddd</>} />;
+export function AboutPage() {
+  return <Page title="About" contents={<About />} />;
 }
 
-export function Skills() {
+export function SkillsPage() {
   return <Page title="Skills" contents={<>ddd</>} />;
 }
 
-export function Contact() {
+export function ContactPage() {
   return <Page title="Contact" contents={<>ddd</>} />;
 }
 
@@ -26,15 +28,15 @@ let routes: RouteObject[] = [
       { index: true, element: <Home /> },
       {
         path: "/about",
-        element: <About />,
+        element: <AboutPage />,
       },
       {
         path: "/skills",
-        element: <Skills />,
+        element: <SkillsPage />,
       },
       {
         path: "/contact",
-        element: <Contact />,
+        element: <ContactPage />,
       },
       { path: "*", element: <Home /> },
     ],
