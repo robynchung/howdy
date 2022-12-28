@@ -26,9 +26,11 @@ const theme = createTheme({
       },
     },
 
-    MuiIcon: {
+    MuiSvgIcon: {
       styleOverrides: {
-        colorPrimary: colors.blue,
+        root: {
+          color: colors.blue,
+        },
       },
     },
 

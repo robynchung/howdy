@@ -1,3 +1,4 @@
+import Grid from "@mui/material/Grid";
 import { styled } from "@mui/system";
 
 export const StyledFloatContainer = styled("div")({
@@ -7,4 +8,8 @@ export const StyledFloatContainer = styled("div")({
   cursor: "pointer",
   display: "flex",
   alignItems: "center",
+});
+
+export const StyledIconContainer = styled(Grid)({
+  marginRight: 25,
 });
