@@ -2,6 +2,7 @@ import {
   StyledPageContainer,
   StyledPageTitleBox,
   StyledTitle,
+  StyledContentBox,
 } from "styles/Layout";
 
 type Props = {
@@ -15,7 +16,7 @@ function Page({ title, contents }: Props) {
       <StyledPageTitleBox>
         <StyledTitle>{title}</StyledTitle>
       </StyledPageTitleBox>
-      <div>{contents}</div>
+      <StyledContentBox>{contents}</StyledContentBox>
     </StyledPageContainer>
   );
 }

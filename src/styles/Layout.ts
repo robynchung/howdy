@@ -19,6 +19,12 @@ export const StyledPageContainer = styled("div")(({ theme }) => {
     padding: 25,
     minHeight: "65%",
     width: "100%",
+    position: "relative",
+
+    [theme.breakpoints.down("md")]: {
+      marginTop: "10vh",
+      overflow: "scroll",
+    },
   };
 });
 
@@ -26,10 +32,17 @@ export const StyledPageTitleBox = styled("div")(({ theme }) => {
   return {
     display: "flex",
     justifyContent: "flex-end",
-    marginBottom: 50,
+    alignItems: "flex-end",
+    paddingTop: 40,
+    paddingBottom: 50,
 
     [theme.breakpoints.down("md")]: {
       justifyContent: "flex-start",
+      position: "sticky",
+      top: -40,
+
+      background:
+        "linear-gradient(360deg, rgba(2,0,36,0) 0%, rgba(255,255,255,1) 14%, rgba(255,255,255,1) 100%)",
     },
   };
 });
@@ -49,5 +62,11 @@ export const StyledTitle = styled("span")(({ theme }) => {
       minWidth: "100%",
       height: 70,
     },
+  };
+});
+
+export const StyledContentBox = styled("div")(({ theme }) => {
+  return {
+    // overflow: "scroll",
   };
 });
