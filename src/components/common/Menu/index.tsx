@@ -8,6 +8,7 @@ import Grid from "@mui/material/Grid";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
 import { saveAs } from "file-saver";
+import CloseIcon from "@mui/icons-material/Close";
 
 // components
 import useMenu from "hooks/useMenu";
@@ -19,6 +20,11 @@ import {
   StyledFloatContainer,
   StyledIconContainer,
   StyledButton,
+  StyledButtonBox,
+  StyledCloseBox,
+  StyledDrawer,
+  StyledMenuListBox,
+  StyledMenuListContainer,
 } from "styles/Menu";
 import type { MenuProps, IconProps, SocialProps } from "types/menu";
 
@@ -29,15 +35,35 @@ function Menu({ menuList }: MenuProps) {
     <>
       <FloatContainer handleToggle={() => toggleDrawer(true)} />
 
-      <Drawer anchor={"right"} open={state} onClose={() => toggleDrawer(false)}>
-        {menuList.map((menu) => {
-          return (
-            <Link key={menu.to} to={menu.to}>
-              {menu.name}
-            </Link>
-          );
-        })}
-      </Drawer>
+      <StyledDrawer
+        anchor={"right"}
+        open={state}
+        onClose={() => toggleDrawer(false)}
+        style={{
+          width: "100%",
+        }}
+        sx={{ width: "100%" }}
+      >
+        <StyledMenuListContainer container>
+          <StyledCloseBox item xs={12} flexShrink={0}>
+            <CloseIcon
+              color="primary"
+              fontSize="large"
+              onClick={() => toggleDrawer(false)}
+            />
+          </StyledCloseBox>
+
+          <StyledMenuListBox item xs={12} flexShrink={3}>
+            {menuList.map((menu) => {
+              return (
+                <Link key={menu.to} to={menu.to}>
+                  {menu.name}
+                </Link>
+              );
+            })}
+          </StyledMenuListBox>
+        </StyledMenuListContainer>
+      </StyledDrawer>
     </>
   );
 }
@@ -76,7 +102,7 @@ function Social({ socialList }: SocialProps) {
           </Grid>
         );
       })}
-      <Grid item style={{ display: "flex", alignItems: "center" }}>
+      <StyledButtonBox item>
         <StyledButton
           variant="outlined"
           size="small"
@@ -85,7 +111,7 @@ function Social({ socialList }: SocialProps) {
         >
           Download CV
         </StyledButton>
-      </Grid>
+      </StyledButtonBox>
     </StyledIconContainer>
   );
 }
