@@ -18,13 +18,13 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
-console.log(process.env);
-
 root.render(
   <ThemeProvider theme={theme}>
     <CssBaseline />
     <Helmet titleTemplate={seo.titleTemplate} defaultTitle={seo.defaultTitle}>
-      <base target="_blank" href={seo.baseURL} />
+      {process.env.NODE_ENV !== "development" ? (
+        <base target="_blank" href={seo.baseURL} />
+      ) : null}
       <meta name="description" content={seo.description} />
 
       {/* facebook */}
