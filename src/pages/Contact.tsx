@@ -68,7 +68,14 @@ function Contact() {
     formState: { errors },
   } = useForm<IFormInput>();
 
-  const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+    const mailTo = `mailto:rjungprogrammer@gmail.com`;
+    const subject = `?subject=[Job] Hello Aeri`;
+    const greeting = `Hello Aeri, my name is ${data.fullName}`;
+    const message = `&body=${greeting} %0D%0A${data.message} %0D%0A %0D%0A from ${data.email}`;
+
+    (window as any).location = `mailto:${mailTo}${subject}${message}`;
+  };
 
   const renderErrorMessage = (type: string | undefined): string => {
     switch (type) {
