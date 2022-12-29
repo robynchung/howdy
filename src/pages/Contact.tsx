@@ -13,6 +13,53 @@ interface IFormInput {
   message: string;
 }
 
+type FormInputType = {
+  key: keyof IFormInput;
+  props: {
+    label: string;
+    multiline?: boolean;
+    rows?: number;
+  };
+  option: {
+    required?: boolean;
+    pattern?: RegExp;
+  };
+};
+
+const formList: Array<FormInputType> = [
+  {
+    key: "fullName",
+    props: {
+      label: "Full Name",
+    },
+    option: { required: true },
+  },
+
+  {
+    key: "email",
+    props: {
+      label: "E-mail",
+    },
+    option: {
+      required: true,
+      pattern:
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/gi,
+    },
+  },
+
+  {
+    key: "message",
+    props: {
+      label: "Message",
+      rows: 10,
+      multiline: true,
+    },
+    option: {
+      required: true,
+    },
+  },
+];
+
 function Contact() {
   const {
     register,
@@ -40,44 +87,22 @@ function Contact() {
     <SubContainer>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <TextField
-              error={"fullName" in errors}
-              fullWidth
-              required
-              helperText={renderErrorMessage(errors?.fullName?.type)}
-              label="Full Name"
-              variant="filled"
-              {...register("fullName", { required: true })}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              error={"email" in errors}
-              fullWidth
-              required
-              label="E-mail"
-              variant="filled"
-              helperText={renderErrorMessage(errors?.email?.type)}
-              {...register("email", {
-                required: true,
-                pattern:
-                  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/gi,
-              })}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              required
-              label="Message"
-              variant="filled"
-              rows={10}
-              helperText={renderErrorMessage(errors?.message?.type)}
-              multiline
-              {...register("message", { required: true })}
-            />
-          </Grid>
+          {formList.map((item: FormInputType) => {
+            return (
+              <Grid key={item.key} item xs={12}>
+                <TextField
+                  error={item.key in errors}
+                  fullWidth
+                  required
+                  helperText={renderErrorMessage(errors?.[item.key]?.type)}
+                  variant="filled"
+                  {...register(item.key, item.option)}
+                  {...item.props}
+                />
+              </Grid>
+            );
+          })}
+
           <StyledSubmitContainer item xs={12}>
             <StyledButton
               variant="outlined"
