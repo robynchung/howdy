@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 
-import { StyledContainer, StyledBox } from "styles/About";
+import { SubContainer } from "components/Layout/Container";
 import { StyledSubmitContainer } from "styles/Contact";
 import { StyledButton } from "styles/Menu";
 
@@ -24,51 +24,52 @@ function Contact() {
   const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
 
   return (
-    <StyledContainer>
-      <StyledBox>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <Grid container spacing={3}>
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                label="Full Name"
-                variant="filled"
-                {...register("fullName", { required: true, maxLength: 20 })}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                label="E-mail"
-                variant="filled"
-                {...register("email", { required: true, maxLength: 20 })}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                label="Message"
-                variant="filled"
-                maxRows={10}
-                rows={10}
-                multiline
-                {...register("message", { required: true, maxLength: 20 })}
-              />
-            </Grid>
-            <StyledSubmitContainer item xs={12}>
-              <StyledButton
-                variant="outlined"
-                size="medium"
-                startIcon={<FileDownloadIcon />}
-                type="submit"
-              >
-                Submit
-              </StyledButton>
-            </StyledSubmitContainer>
+    <SubContainer>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
+            <TextField
+              fullWidth
+              required
+              label="Full Name"
+              variant="filled"
+              {...register("fullName", { required: true, maxLength: 20 })}
+            />
           </Grid>
-        </form>
-      </StyledBox>
-    </StyledContainer>
+          <Grid item xs={12}>
+            <TextField
+              fullWidth
+              required
+              label="E-mail"
+              variant="filled"
+              {...register("email", { required: true, maxLength: 20 })}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              fullWidth
+              required
+              label="Message"
+              variant="filled"
+              maxRows={10}
+              rows={10}
+              multiline
+              {...register("message", { required: true, maxLength: 20 })}
+            />
+          </Grid>
+          <StyledSubmitContainer item xs={12}>
+            <StyledButton
+              variant="outlined"
+              size="medium"
+              startIcon={<FileDownloadIcon />}
+              type="submit"
+            >
+              Submit
+            </StyledButton>
+          </StyledSubmitContainer>
+        </Grid>
+      </form>
+    </SubContainer>
   );
 }
 

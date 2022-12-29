@@ -13,6 +13,29 @@ export const StyledContainer = styled(Grid)({
   height: "100vh",
 });
 
+export const StyledSubContainer = styled("div")({
+  display: "flex",
+  justifyContent: "flex-end",
+});
+
+export const StyledBox = styled("div")(({ theme }) => {
+  return {
+    width: "70%",
+
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+    },
+
+    "& .MuiTypography-root": {
+      textAlign: "right",
+
+      [theme.breakpoints.down("md")]: {
+        textAlign: "left",
+      },
+    },
+  };
+});
+
 // pages
 export const StyledPageContainer = styled("div")(({ theme }) => {
   return {
