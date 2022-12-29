@@ -4,6 +4,7 @@
   "homepage": "https://robynchung.github.io/howdy",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.11.0",
@@ -19,6 +20,7 @@
     "file-saver": "^2.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.41.2",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6",

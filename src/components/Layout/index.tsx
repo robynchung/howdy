@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 
 // styles & components
-import Container from "components/Layout/Container";
+import { Container } from "components/Layout/Container";
 import Menu from "components/common/Menu";
 
 // data

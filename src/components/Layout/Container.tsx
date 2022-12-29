@@ -1,9 +1,15 @@
-import { StyledContainer } from "styles/Layout";
+import { StyledContainer, StyledSubContainer, StyledBox } from "styles/Layout";
 
 import type { ContainerProps } from "types/layout";
 
-function Container({ children }: ContainerProps) {
+export function Container({ children }: ContainerProps) {
   return <StyledContainer container>{children}</StyledContainer>;
 }
 
-export default Container;
+export function SubContainer({ children }: ContainerProps) {
+  return (
+    <StyledSubContainer>
+      <StyledBox>{children}</StyledBox>
+    </StyledSubContainer>
+  );
+}

@@ -25,6 +25,30 @@ const theme = createTheme({
       `,
     },
 
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          "&.Mui-focused": {
+            color: colors.blue,
+            fontWeight: 800,
+          },
+        },
+      },
+    },
+
+    MuiFilledInput: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "rgba(0, 0, 0, 0.03)",
+          fontSize: "0.9em",
+
+          "&::after": {
+            borderBottom: `solid 3px ${colors.blue}`,
+          },
+        },
+      },
+    },
+
     MuiTypography: {
       styleOverrides: {
         body1: {

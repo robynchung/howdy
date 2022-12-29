@@ -1,3 +1,5 @@
+import React from "react";
+
 export declare type ContainerProps = {
-  children: JSX.Element;
+  children: React.ReactNode;
 };

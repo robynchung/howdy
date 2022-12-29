@@ -3,6 +3,7 @@ import type { RouteObject } from "react-router-dom";
 import Home from "pages/Home";
 import About from "pages/About";
 import Skills from "pages/Skills";
+import Contact from "pages/Contact";
 
 import Page from "components/Layout/Page";
 
@@ -18,7 +19,7 @@ export function SkillsPage() {
 }
 
 export function ContactPage() {
-  return <Page title="Let's Chat!" contents={<>ddd</>} />;
+  return <Page title="Let's Chat!" contents={<Contact />} />;
 }
 
 let routes: RouteObject[] = [
