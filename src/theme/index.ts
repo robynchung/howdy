@@ -13,6 +13,15 @@ const theme = createTheme({
         * { 
           transition: all 0.5s ease-in-out;
         }
+
+        ul, li {
+          margin: 0;
+          padding: 0;
+        }
+
+        li {
+          list-style: none;
+        }
       `,
     },
 
@@ -20,6 +29,13 @@ const theme = createTheme({
       styleOverrides: {
         body1: {
           lineHeight: 1.8,
+        },
+        h3: {
+          color: colors.blue,
+          fontWeight: 800,
+          fontSize: "1.2em",
+          border: `solid 3px ${colors.blue}`,
+          padding: 10,
         },
         root: {
           fontFamily: fontFace.text,
