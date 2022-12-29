@@ -2,6 +2,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
+import emailjs from "@emailjs/browser";
 
 import { SubContainer } from "components/Layout/Container";
 import { StyledSubmitContainer } from "styles/Contact";
@@ -68,7 +69,16 @@ function Contact() {
     formState: { errors },
   } = useForm<IFormInput>();
 
-  const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<IFormInput> = async (data) => {
+    console.log(process.env);
+    const {
+      REACT_APP_EMAIL_PUBLIC_KEY: public_id,
+      REACT_APP_EMAIL_SERVICE_ID: service_id,
+      REACT_APP_EMAIL_TEMPLATE_ID: template_id,
+    } = process.env;
+
+    emailjs.send(service_id, template_id, {}, public_id);
+  };
 
   const renderErrorMessage = (type: string | undefined): string => {
     switch (type) {
