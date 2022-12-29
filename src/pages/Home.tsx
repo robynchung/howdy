@@ -9,7 +9,7 @@ import {
   StyledAbout,
 } from "styles/Home";
 
-const currentYear = new Date();
+import { getExpNum } from "utils/convert";
 
 function Home() {
   return (
@@ -34,8 +34,7 @@ function Home() {
       </StyledNameBox>
       <StyledIntroBox item md={6} xs={12}>
         <StyledAbout>
-          {currentYear.getFullYear() - 2019}+ years of experience in frontend
-          development.
+          {getExpNum()}+ years of experience in frontend development.
           <br />
           My mission is to design and develop a website that you and your
           audience love.
