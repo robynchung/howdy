@@ -73,6 +73,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           color: colors.blue,
+          cursor: "pointer",
 
           "&:hover": {
             color: colors.text,
