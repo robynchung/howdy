@@ -1,26 +1,36 @@
-{
-  "framework": [
-    "[React / Redux / Recoil]",
-    "[React Native]",
-    "[Node.js]",
-    "Serverless framework",
-    "Google Firebase",
-    "Webpack"
-  ],
-  "languages": [
-    "[Javascript(ES6+)]",
-    "[Amazon AWS / DynamoDB / RDS]",
-    "[Typescript]",
-    "Python",
-    "HTML5",
-    "CSS3 / SCSS",
-    "Firebase"
-  ],
-  "traits": [
-    "Work independently",
-    "Self-Starter",
-    "Hard working",
-    "Team oriented",
-    "Adapt and learn rapidly evolving tech stack"
-  ]
-}
+[
+  {
+    "title": "Frameworks & Technologies",
+    "list": [
+      "[React / Redux / Recoil]",
+      "[React Native]",
+      "[Node.js]",
+      "Serverless framework",
+      "Google Firebase",
+      "Webpack"
+    ]
+  },
+
+  {
+    "title": "Languages & Tools",
+    "list": [
+      "[Javascript(ES6+)]",
+      "[Amazon AWS / DynamoDB / RDS]",
+      "[Typescript]",
+      "Python",
+      "HTML5",
+      "CSS3 / SCSS",
+      "Firebase"
+    ]
+  },
+  {
+    "title": "Personality traits",
+    "list": [
+      "Work independently",
+      "Self-Starter",
+      "Hard working",
+      "Team oriented",
+      "Adapt and learn rapidly evolving tech stack"
+    ]
+  }
+]
