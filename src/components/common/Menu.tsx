@@ -50,6 +50,8 @@ function Menu({ menuList }: MenuProps) {
             );
           })}
         </StyledMenuListBox>
+
+        <Social socialList={social} />
       </StyledDrawer>
     </>
   );
