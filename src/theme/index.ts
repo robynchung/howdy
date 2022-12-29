@@ -73,6 +73,10 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           color: colors.blue,
+
+          "&:hover": {
+            color: colors.text,
+          },
         },
       },
     },
@@ -83,6 +87,14 @@ const theme = createTheme({
           borderColor: colors.blue,
           color: colors.blue,
           textTransform: "none",
+
+          "&:hover": {
+            color: colors.text,
+            borderColor: colors.text,
+            "& .MuiSvgIcon-root": {
+              color: colors.text,
+            },
+          },
         },
 
         sizeSmall: {
