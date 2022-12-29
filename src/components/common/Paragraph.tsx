@@ -1,6 +1,6 @@
 import { StyledParagraph } from "styles/Paragraph";
 type Props = {
-  children: string;
+  children: React.ReactNode;
 };
 
 function Paragraph({ children }: Props) {

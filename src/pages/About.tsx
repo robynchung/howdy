@@ -6,24 +6,34 @@ function About() {
     <StyledContainer>
       <StyledBox>
         <Paragraph>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of
-          the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown
-          printer took a galley of type and scrambled it to make a type specimen
-          book. It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged. It was
-          popularised in the 1960s with the release of Letraset sheets
-          containing Lorem Ipsum passages, and more recently with desktop
-          publishing software like Aldus PageMaker including versions of Lorem
-          Ipsum.
+          As a highly motivated and
+          <span className="highlight"> hard-working frontend engineer </span>
+          with <span className="highlight">3+ years of experience,</span> I have
+          a strong track record of creating intuitive and visually appealing
+          <span className="highlight"> user interfaces.</span> confidence.
+        </Paragraph>
+
+        <Paragraph>
+          In addition to my frontend skills, I am also a capable{" "}
+          <span className="highlight">backend engineer,</span> able to develop
+          robust and scalable server-side systems.
+          <span className="highlight">
+            I am a very genuine and cooperative team player
+          </span>
+          , always willing to lend a hand and collaborate with others to achieve
+          our shared goals. At the same time, I am also a
+          <span className="highlight"> self-starter</span> who is able to{" "}
+          <span className="highlight"> work independently</span> and take on new
+          challenges with confidence.
+        </Paragraph>
+
+        <Paragraph>
+          I believe that my combination of{" "}
+          <span className="highlight">
+            technical expertise, positive attitude, and <br />
+            willingness to learn{" "}
+          </span>
+          make me an excellent fit for any project.
         </Paragraph>
       </StyledBox>
     </StyledContainer>
