@@ -22,9 +22,6 @@ root.render(
   <ThemeProvider theme={theme}>
     <CssBaseline />
     <Helmet titleTemplate={seo.titleTemplate} defaultTitle={seo.defaultTitle}>
-      {process.env.NODE_ENV !== "development" ? (
-        <base target="_blank" href={seo.baseURL} />
-      ) : null}
       <meta name="description" content={seo.description} />
 
       {/* facebook */}
