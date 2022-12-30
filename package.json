@@ -29,9 +29,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "pre": "npm run build",
-    "deploy": "gh-pages -d build",
-    "clean:deploy": "gh-pages-clean gh-pages -d build",
+    "deploy": "npm run build && gh-pages -d build",
+    "clean": "gh-pages-clean gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
