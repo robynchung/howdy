@@ -1,6 +1,6 @@
 # Aeri Jung Portfolio
 
-Welcome to my portfolio website! Here you can find my resume and other information about my work and projects.
+Welcome to my portfolio website! Here you can find my resume and other information.
 
 ## Technologies Used
 
