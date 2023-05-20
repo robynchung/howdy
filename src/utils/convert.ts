@@ -1,4 +1,4 @@
-export const refineHightlight = (txt: string) => {
+export const refineHighlight = (txt: string) => {
   const replaced = txt
     .replace(/\[/g, `<span class="highlight">`)
     .replace(/\]/g, `</span>`);
