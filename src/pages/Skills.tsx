@@ -2,7 +2,7 @@ import Grid from "@mui/material/Grid";
 import Title from "components/common/Title";
 
 import { StyledList } from "styles/Skills";
-import { refineHightlight } from "utils/convert";
+import { refineHighlight } from "utils/convert";
 
 import skills from "data/skills.json";
 
@@ -14,7 +14,7 @@ type SkillType = {
 function Skills() {
   const renderList = (list: Array<string>) => {
     return list.map((item) => {
-      const replaced = refineHightlight(item);
+      const replaced = refineHighlight(item);
 
       return <li key={item} dangerouslySetInnerHTML={{ __html: replaced }} />;
     });
